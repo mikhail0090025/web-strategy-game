@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procedural World Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topbar">
+    <div class="title">
+        <h1>World Generator</h1>
+        <span>Procedural Strategy Map</span>
+    </div>
+
+    <div class="controls">
+        <label>
+            Размер
+            <select id="mapSize">
+                <option value="small">Маленькая</option>
+                <option value="medium" selected>Средняя</option>
+                <option value="large">Большая</option>
+            </select>
+        </label>
+
+        <label>
+            Страны
+            <input id="countryCount" type="number" min="2" max="100" value="15">
+        </label>
+
+        <button id="generateButton">Сгенерировать</button>
+    </div>
+</div>
+
+<div class="modebar">
+    <button class="mode active" data-mode="terrain">Рельеф</button>
+    <button class="mode" data-mode="countries">Страны</button>
+</div>
+
+<div id="mapContainer">
+    <canvas id="mapCanvas"></canvas>
+</div>
+
+<div class="legend" id="legend"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
